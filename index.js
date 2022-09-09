@@ -1,19 +1,21 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // check each element in array
+  for (let i = 0; i < array.length; i++) {
+    const compare = target - array[i];
+    // check each other element in the array
+    for (let j = i + 1; j < array.length; j++) {
+
+      // determine if these two elements sum to
+      if (array[j] === compare) {
+      //return all pairs of integers that sum to the target
+        return true;
+      }
+
+    }
+  }
+  return false;
+
 }
-
-/* 
-  Write the Big O time complexity of your function here
-*/
-
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
-
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
